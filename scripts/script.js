@@ -55,6 +55,13 @@ sliderContentList.forEach((item, idx) => {
 });
 
 const imgList = document.getElementsByClassName('biography__img');
+imgList[0].classList.add('active')
+
+const clearActive = () => {
+	Array.from(imgList).forEach(img => {
+		img.classList.contains('active') && img.classList.remove('active');
+	})
+}
 
 
 btnLeft.addEventListener('click', () => {
@@ -65,6 +72,7 @@ btnLeft.addEventListener('click', () => {
 	}
 
 	const idx = shift / width;
+	clearActive();
 	imgList[idx].classList.add('active');
 
 	sliderList.style.left = shift + 'px';
@@ -78,6 +86,8 @@ btnRight.addEventListener('click', () => {
 	}
 
 	const idx = shift / width;
+	clearActive();
+	imgList[idx].classList.add('active');
 	sliderList.style.left = shift + 'px';
 });
 
