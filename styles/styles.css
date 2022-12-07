@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Open Sans";
-  src: url(./font/Open_Sans/static/OpenSans/OpenSans-Light.ttf);
+  src: url(../font/Open_Sans/static/OpenSans/OpenSans-Light.ttf);
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url(./font/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf);
+  src: url(../font/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf);
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url(./font/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-ExtraBold.ttf);
+  src: url(../font/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-ExtraBold.ttf);
   font-weight: 800;
 }
 
 @font-face {
   font-family: "Varela";
-  src: url(./font/Varela/Varela-Regular.ttf);
+  src: url(../font/Varela/Varela-Regular.ttf);
   font-weight: 400;
 }
 
