@@ -3,6 +3,8 @@ console.log('Hi, Ramzes');
 const sliderList = document.getElementById('slider-list');
 const [btnLeft, btnRight] = document.getElementsByClassName('biography__btn-arrow');
 
+let shift = 0;
+
 const sliderContentList = [
 {
 	content: `Molestie ultricies quam. Donec sem. 
@@ -25,8 +27,8 @@ const sliderContentList = [
 	adipisicing elit. Facilis repellendus incidunt nihil.`
 },
 {
-content: `Lorem ipsum dolor sit amet consectetur 
-adipisicing elit. `
+	content: `Lorem ipsum dolor sit amet consectetur 
+	adipisicing elit. `
 }
 ];
 
@@ -39,13 +41,16 @@ sliderContentList.forEach(item => {
 });
 
 btnLeft.addEventListener('click', (event) => {
-    console.log('clicked!!!', event);
+  shift = +shift + 916;
+	sliderList.style.left = shift + 'px';
 
 });
 
 btnRight.addEventListener('click', (event) => {
-    console.log('clicked!!!', event);
-		sliderList.style.right = 916 + 'px'
+	shift = +shift - 916;
+	sliderList.style.left = shift + 'px';
+	console.log(shift);
+
 });
 
 console.log(sliderList, btnLeft, btnRight);
