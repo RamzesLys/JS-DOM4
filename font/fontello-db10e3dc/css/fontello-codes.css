@@ -1,0 +1,23 @@
+
+.icon-star:before { content: '\e800'; } /* '' */
+.icon-heart-empty:before { content: '\e801'; } /* '' */
+.icon-trophy:before { content: '\e802'; } /* '' */
+.icon-play:before { content: '\e803'; } /* '' */
+.icon-clock:before { content: '\e804'; } /* '' */
+.icon-camera:before { content: '\e806'; } /* '' */
+.icon-left-open:before { content: '\e807'; } /* '' */
+.icon-right-open:before { content: '\e808'; } /* '' */
+.icon-videocam:before { content: '\f03a'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-exchange:before { content: '\f0ec'; } /* '' */
+.icon-coffee-1:before { content: '\f0f4'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-laptop:before { content: '\f109'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */
+.icon-rocket:before { content: '\f135'; } /* '' */
+.icon-apple:before { content: '\f179'; } /* '' */
+.icon-lifebuoy:before { content: '\f1cd'; } /* '' */
+.icon-paper-plane:before { content: '\f1d8'; } /* '' */
+.icon-safari:before { content: '\f267'; } /* '' */
+.icon-twitter:before { content: '\f309'; } /* '' */
