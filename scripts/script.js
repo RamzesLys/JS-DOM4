@@ -2,10 +2,11 @@ console.log('Hi, Ramzes');
 
 const sliderList = document.getElementById('slider-list');
 const [btnLeft, btnRight] = document.getElementsByClassName('biography__btn-arrow');
+const [sliderVisible] = document.getElementsByClassName('slider__visible');
 
 let shift = 0;
 
-const width = -916;
+const width = -sliderVisible.clientWidth;
 
 const sliderContentList = [
 	{
