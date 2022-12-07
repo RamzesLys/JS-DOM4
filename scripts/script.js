@@ -1,5 +1,8 @@
 console.log('Hi, Ramzes');
 
+const comment = document.createElement('li');
+
+
 const sliderContentList = [
     {
         content: `Molestie ultricies quam. Donec sem. Praesent pretium.
@@ -10,4 +13,17 @@ const sliderContentList = [
         Aliquam ullamcorper sem.`
 
     }
-]
+];
+
+const sliderList = document.getElementById('slider-list');
+const [btnLeft, btnRight] = document.getElementsByClassName('biography__btn-arrow');
+
+btnLeft.addEventListener('click', (event) => {
+    console.log('clicked!!!', event);
+});
+
+btnRight.addEventListener('click', (event) => {
+    console.log('clicked!!!', event);
+});
+
+console.log(sliderList, btnLeft, btnRight);
