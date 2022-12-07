@@ -63,6 +63,7 @@ btnLeft.addEventListener('click', () => {
 	} else {
 		shift = shift - width
 	}
+
 	const idx = shift / width;
 	imgList[idx].classList.add('active');
 
@@ -75,6 +76,8 @@ btnRight.addEventListener('click', () => {
 	} else {
 		shift = shift + width
 	}
+
+	const idx = shift / width;
 	sliderList.style.left = shift + 'px';
 });
 
