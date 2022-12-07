@@ -4,6 +4,7 @@ const sliderList = document.getElementById('slider-list');
 const [btnLeft, btnRight] = document.getElementsByClassName('biography__btn-arrow');
 const [sliderVisible] = document.getElementsByClassName('slider__visible');
 const [imgBlock] = document.getElementsByClassName('biography__img-block');
+const [sliderDotsBlock] = document.getElementsByClassName('biography__dots');
 
 const sliderContentList = [
 	{
@@ -50,19 +51,27 @@ sliderContentList.forEach((item, idx) => {
 	img.alt = `img-${idx + 1}`;
 	img.src = item.url;
 
+	const dot = document.createElement('li');
+	dot.classList.add('biography__dot')
 	imgBlock.append(img)
 	sliderList.append(comment);
+	sliderDotsBlock.append(dot);
 });
 
 const imgList = document.getElementsByClassName('biography__img');
-imgList[0].classList.add('active')
+imgList[0].classList.add('active');
+
+const dotsList = document.getElementsByClassName('biography__dot');
+dotsList[0].classList.add('active');
 
 const clearActive = () => {
 	Array.from(imgList).forEach(img => {
 		img.classList.contains('active') && img.classList.remove('active');
+	});
+	Array.from(dotsList).forEach(dot => {
+		dot.classList.contains('active') && dot.classList.remove('active');
 	})
 }
-
 
 btnLeft.addEventListener('click', () => {
 	if (shift === 0) {
@@ -70,11 +79,10 @@ btnLeft.addEventListener('click', () => {
 	} else {
 		shift = shift - width
 	}
-
-	const idx = shift / width;
 	clearActive();
+	const idx = shift / width;
 	imgList[idx].classList.add('active');
-
+	dotsList[idx].classList.add('active')
 	sliderList.style.left = shift + 'px';
 });
 
@@ -84,10 +92,17 @@ btnRight.addEventListener('click', () => {
 	} else {
 		shift = shift + width
 	}
-
-	const idx = shift / width;
 	clearActive();
+	const idx = shift / width;
 	imgList[idx].classList.add('active');
+	dotsList[idx].classList.add('active')
 	sliderList.style.left = shift + 'px';
 });
+
+Array.from(dotsList).forEach((dot, idx) => {
+	dot.addEventListener('click', () => {
+		console.log(idx);
+	}
+	)
+})
 
