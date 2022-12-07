@@ -1155,6 +1155,13 @@ li {
   padding: 69px 0;
 }
 
+.biography__img-block {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  margin: 0 auto;
+}
+
 .biography__img {
   width: 115px;
   height: 115px;
