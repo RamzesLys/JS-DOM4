@@ -5,10 +5,6 @@ const [btnLeft, btnRight] = document.getElementsByClassName('biography__btn-arro
 const [sliderVisible] = document.getElementsByClassName('slider__visible');
 const [imgBlock] = document.getElementsByClassName('biography__img-block');
 
-
-
-
-
 const sliderContentList = [
 	{
 		content: `Molestie ultricies quam. Donec sem. 
@@ -40,6 +36,10 @@ const sliderContentList = [
 	}
 ];
 
+let shift = 0;
+
+const width = -sliderVisible.clientWidth;
+
 sliderContentList.forEach((item, idx) => {
 	const comment = document.createElement('li');
 	comment.textContent = item.content;
@@ -54,20 +54,22 @@ sliderContentList.forEach((item, idx) => {
 	sliderList.append(comment);
 });
 
-let shift = 0;
+const imgList = document.getElementsByClassName('biography__img');
 
-const width = -sliderVisible.clientWidth;
 
-btnLeft.addEventListener('click', (event) => {
+btnLeft.addEventListener('click', () => {
 	if (shift === 0) {
 		shift = width * (sliderContentList.length - 1);
 	} else {
 		shift = shift - width
 	}
+	const idx = shift / width;
+	imgList[idx].classList.add('active');
+
 	sliderList.style.left = shift + 'px';
 });
 
-btnRight.addEventListener('click', (event) => {
+btnRight.addEventListener('click', () => {
 	if (shift < width * (sliderContentList.length - 2)) {
 		shift = 0;
 	} else {

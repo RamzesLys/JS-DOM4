@@ -1165,9 +1165,16 @@ li {
 .biography__img {
   width: 115px;
   height: 115px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   display: block;
+  opacity: 0;
+  position: absolute;
   margin: auto;
+  transition: .3s;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.biography__img.active {
+  opacity: 1;
 }
 
 .biography__desc {
