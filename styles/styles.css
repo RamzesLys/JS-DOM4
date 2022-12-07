@@ -1163,11 +1163,11 @@ li {
 }
 
 .biography__img {
-  width: 115px;
-  height: 115px;
   display: block;
   opacity: 0;
   position: absolute;
+  width: 115px;
+  height: 115px;
   margin: auto;
   transition: .3s;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
