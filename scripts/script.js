@@ -101,8 +101,10 @@ btnRight.addEventListener('click', () => {
 
 Array.from(dotsList).forEach((dot, idx) => {
 	dot.addEventListener('click', () => {
-		console.log(idx);
 	}
 	)
-})
+});
 
+const [reviewsBtnLeft, reviewsBtnRight] = document.getElementsByClassName('reviews__btn-arrow');
+const reviewsSlider = document.getElementsByClassName('reviews__slider');
+const [reviewsSliderItem] = document.getElementsByClassName('reviews__item')

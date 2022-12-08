@@ -1034,6 +1034,24 @@ li {
   color: #196fc0;
 }
 
+.reviews__item.active {
+  width: 230px;
+  height: 212px;
+  content: "";
+  background-color: #196fc0;
+  color: #196fc0;
+}
+
+.reviews__item.active .reviews__slider-square {
+  width: 75px;
+  height: 75px;
+  box-shadow: none;
+}
+
+.reviews__item.active .reviews__slider-text {
+  display: none;
+}
+
 .reviews__item:hover .reviews__slider-square {
   width: 75px;
   height: 75px;
