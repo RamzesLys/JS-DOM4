@@ -105,6 +105,23 @@ Array.from(dotsList).forEach((dot, idx) => {
 	)
 });
 
+//My slider
+
 const [reviewsBtnLeft, reviewsBtnRight] = document.getElementsByClassName('reviews__btn-arrow');
-const reviewsSlider = document.getElementsByClassName('reviews__slider');
-const [reviewsSliderItem] = document.getElementsByClassName('reviews__item')
+const [reviewsSlider] = document.getElementsByClassName('reviews__slider');
+const reviewsItemList = document.getElementsByClassName('reviews__item');
+
+reviewsItemList[1].classList.add('active')
+
+const reviewsClearActive = () => {
+	Array.from(reviewsItemList).forEach((item) => {
+		item.classList.contains('active') && item.classList.remove('active')
+	})
+};
+
+reviewsBtnLeft.addEventListener('click', () => {
+	reviewsClearActive()
+const reviewsElement = reviewsItemList[i];
+	reviewsElement[i].classList.add('active')
+}
+)
