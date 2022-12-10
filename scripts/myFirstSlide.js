@@ -13,27 +13,19 @@ const cleaning = () => {
 	})
 }
 
-revSliderItem.forEach((item, idx) => {
-	item.addEventListener('click', () => {
-		index = idx;
-		currentSlide(index);
-	})
-})
-
 const activeSlide = (item) => {
 	for (revSliderItem of revSliderList) {
 		revSliderItem.classList.remove('active');
 	}
 	cleaning()
 	revSliderItem[item].classList.add('active');
-
 }
 
 const currentSlide = (idx) => {
 	activeSlide(idx)
 }
 
-const nextSlide = () => {
+btnNext.addEventListener('click', () => {
 	if (index === revSliderItem.length - 1) {
 		index = 0
 		currentSlide(index);
@@ -41,19 +33,16 @@ const nextSlide = () => {
 		index ++;
 		currentSlide(index);
 	}
-}
+});
 
-const prevSlide = () => {
+btnPrev.addEventListener('click', () => {
 	if (index === 0) {
 		index = revSliderItem.length - 1;
-		currentSlide(index);;
+		currentSlide(index);
 	} else {
 		index --;
 		currentSlide(index);
 	}
-}
-
-btnNext.addEventListener('click', nextSlide);
-btnPrev.addEventListener('click', prevSlide);
+});
 
 console.log(revSliderItem);
