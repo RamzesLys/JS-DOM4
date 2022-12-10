@@ -113,15 +113,15 @@ const reviewsItemList = document.getElementsByClassName('reviews__item');
 
 reviewsItemList[1].classList.add('active')
 
-const reviewsClearActive = () => {
+const reviewsClearActive = (item) => {
 	Array.from(reviewsItemList).forEach((item) => {
 		item.classList.contains('active') && item.classList.remove('active')
 	})
 };
 
-reviewsBtnLeft.addEventListener('click', () => {
+reviewsBtnLeft.addEventListener('click', (item) => {
 	reviewsClearActive()
-const reviewsElement = reviewsItemList[i];
-	reviewsElement[i].classList.add('active')
+const reviewsElement = reviewsItemList[item];
+	reviewsElement[item].classList.add('active')
 }
 )
