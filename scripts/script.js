@@ -52,8 +52,8 @@ sliderContentList.forEach((item, idx) => {
 	img.src = item.url;
 
 	const dot = document.createElement('li');
-	dot.classList.add('biography__dot')
-	imgBlock.append(img)
+	dot.classList.add('biography__dot');
+	imgBlock.append(img);
 	sliderList.append(comment);
 	sliderDotsBlock.append(dot);
 });
@@ -108,20 +108,39 @@ Array.from(dotsList).forEach((dot, idx) => {
 //My slider
 
 const [reviewsBtnLeft, reviewsBtnRight] = document.getElementsByClassName('reviews__btn-arrow');
-const [reviewsSlider] = document.getElementsByClassName('reviews__slider');
-const reviewsItemList = document.getElementsByClassName('reviews__item');
+const reviewsSlider = document.getElementsByClassName('.reviews__slider');
+const reviewsItem = document.getElementsByClassName('reviews__item');
+reviewsItem[2].classList.add('active');
+const reviewsItemList = Array.from(reviewsItem);
 
-reviewsItemList[1].classList.add('active')
-
-const reviewsClearActive = (item) => {
-	Array.from(reviewsItemList).forEach((item) => {
-		item.classList.contains('active') && item.classList.remove('active')
+const cleanActive = () => {
+	reviewsItemList.forEach(item => {
+		item.classList.contains('active') && item.classList.remove('active');
 	})
-};
-
-reviewsBtnLeft.addEventListener('click', (item) => {
-	reviewsClearActive()
-const reviewsElement = reviewsItemList[item];
-	reviewsElement[item].classList.add('active')
 }
-)
+
+// reviewsItemList.forEach((item, index) => {
+// 	// if (index === 2) {
+// 	// 	item.classList.add('active');
+// 	// } 
+// 	item.dataset.index = index
+// })
+
+
+reviewsBtnLeft.addEventListener('click', (index) => {
+	if (reviewsItemList[2].classList.contains('active')) {
+		reviewsItemList[2].classList.remove('active');
+		reviewsItemList[1].classList.add('active')
+	} 
+	if (reviewsItemList[1].classList.contains('active')) {
+		reviewsItemList[1].classList.remove('active');
+		reviewsItemList[0].classList.add('active')
+	}
+})
+
+reviewsBtnRight.addEventListener('click', (index) => {
+	if (reviewsItemList[2].classList.contains('active')) {
+		reviewsItemList[2].classList.remove('active');
+		reviewsItemList[3].classList.add('active')
+	} 
+})
