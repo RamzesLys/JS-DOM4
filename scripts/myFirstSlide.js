@@ -44,5 +44,3 @@ btnPrev.addEventListener('click', () => {
 		currentSlide(index);
 	}
 });
-
-console.log(revSliderItem);
